@@ -11,8 +11,8 @@
 [image3]: ./examples/placeholder_small.png "Recovery Image"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/original_image.png "Normal Image"
-[image7]: ./examples/flipped_image.png "Flipped Image"
+[image6]: ./examples/original_image.PNG "Normal Image"
+[image7]: ./examples/flipped_image.PNG "Flipped Image"
 
 
 Overview
@@ -129,8 +129,7 @@ Then I repeated this process on track two in order to get more data points.
 
 To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
 
-![alt text][image6]
-![alt text][image7]
+![alt text][image6]![alt text][image7]
 
 ```
 # Now flip the image left-to-right
