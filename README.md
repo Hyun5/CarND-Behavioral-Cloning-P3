@@ -90,7 +90,7 @@ angles.append(-angle)
 #### 4. Model Testing
 
 After the model was trained, the test drive was done with Autonomous mode using the simulator. The car could drive smothly around track.
-![Test Drive Video][image4]
+![alt text][image4]
 
 
 
