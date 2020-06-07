@@ -11,8 +11,8 @@
 [image3]: ./examples/placeholder_small.png "Recovery Image"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/original_image.PNG "Normal Image"
-[image7]: ./examples/flipped_image.PNG "Flipped Image"
+[image6]: ./examples/original_image.png "Normal Image"
+[image7]: ./examples/flipped_image.png "Flipped Image"
 
 
 Overview
