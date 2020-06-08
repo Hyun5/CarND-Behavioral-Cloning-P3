@@ -6,6 +6,7 @@
 
 [//]: # (Image References)
 
+[image0]: ./examples/NVIDIA.JPG "NVIDIA Architecture"
 [image1]: ./examples/center_drive.png "Center Drive"
 [image2]: ./examples/original_image.png "Normal Image"
 [image3]: ./examples/flipped_image.png "Flipped Image"
@@ -26,7 +27,6 @@ My project includes the following files:
 * video.mp4 a video recording of the vehicle driving autonomously around the track
 * READ.md summarizing the results
 
-This README file describes how to output the video in the "Details About Files In This Directory" section.
 
 
 The Project
@@ -43,6 +43,8 @@ The goals / steps of this project are the following:
 #### 1. Solution Design Approach
 
 My model is based on the information of the Udacity lecture and the NVIDA architecture. The model contains dropout layers in order to reduce overfitting. I added 2 times of 50% Dropout in the model.
+![alt text][image0]
+
 
 #### 2. Final Model Architecture
 
@@ -73,10 +75,23 @@ model.fit_generator(train_generator, steps_per_epoch=np.ceil(len(train_samples)/
 ```
 #### 3. Creation of the Training Set & Training Process
 
+Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
+```sh
+python drive.py model.h5
+```
+
+Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
+
+```sh
+python drive.py model.h5
+```
+
+
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+
 ![alt text][image1]
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
+To augment the data set, I flipped images and changed angles to opposite. For example, here is an image that has then been flipped:
 ```
 # flip the image left-to-right
 flippedImg = np.fliplr(image)
@@ -89,7 +104,7 @@ angles.append(-angle)
 #### 4. Model Testing
 
 After the model was trained, the test drive was done with Autonomous mode using the simulator. The car could drive smothly around track.
-[VideoFile](https://github.com/Hyun5/CarND-Behavioral-Cloning-P3/blob/master/examples/video.mp4)
+[See Video File Here.](https://github.com/Hyun5/CarND-Behavioral-Cloning-P3/blob/master/examples/video.mp4)
 
 
 
