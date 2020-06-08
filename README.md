@@ -28,7 +28,6 @@ My project includes the following files:
 * READ.md summarizing the results
 
 
-
 The Project
 ---
 The goals / steps of this project are the following:
@@ -44,7 +43,6 @@ The goals / steps of this project are the following:
 
 My model is based on the information of the Udacity lecture and the NVIDA architecture. The model contains dropout layers in order to reduce overfitting. I added 2 times of 50% Dropout in the model.
 ![alt text][image0]
-
 
 #### 2. Final Model Architecture
 
@@ -74,23 +72,17 @@ model.fit_generator(train_generator, steps_per_epoch=np.ceil(len(train_samples)/
             epochs=5, verbose=1)
 ```
 #### 3. Creation of the Training Set & Training Process
-
-Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
-```sh
-python drive.py model.h5
+To capture good driving behavior, I first recorded two laps on track one using center lane driving using the Udacity provided simulator. All the image files and the log are stored in data directory.
 ```
-
-Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
-
-```sh
-python drive.py model.h5
+python drive.py
 ```
-
-
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
-
+Here is an example image of center lane driving:
 ![alt text][image1]
 
+Run the model.py to proceed the trained convolutiona neural network.
+```
+python model.py
+```
 To augment the data set, I flipped images and changed angles to opposite. For example, here is an image that has then been flipped:
 ```
 # flip the image left-to-right
@@ -101,11 +93,34 @@ angles.append(-angle)
 ![alt text][image2]
 ![alt text][image3]
 
+Hyperparameters
+```
+# Hyperparameteres
+batch_size=32
+EPOCH=5
+```
+Training and validation result
+```
+201/201 [==============================] - 266s 1s/step - loss: 0.0206 - val_loss: 0.0170
+Epoch 2/5
+201/201 [==============================] - 34s 167ms/step - loss: 0.0177 - val_loss: 0.0175
+Epoch 3/5
+201/201 [==============================] - 37s 183ms/step - loss: 0.0167 - val_loss: 0.0163
+Epoch 4/5
+201/201 [==============================] - 36s 180ms/step - loss: 0.0160 - val_loss: 0.0157
+Epoch 5/5
+201/201 [==============================] - 36s 180ms/step - loss: 0.0152 - val_loss: 0.0155
+```
+
 #### 4. Model Testing
+After training finished, using the Udacity provided simulator, I tested the perpormance with my model.h5. 
+The car was able to be driven autonomously around the track by executing; 
+```
+python drive.py model.h5
+```
+The car was smoothly driven around track. [See Video File Here.](https://github.com/Hyun5/CarND-Behavioral-Cloning-P3/blob/master/examples/video.mp4)
 
-After the model was trained, the test drive was done with Autonomous mode using the simulator. The car could drive smothly around track.
-[See Video File Here.](https://github.com/Hyun5/CarND-Behavioral-Cloning-P3/blob/master/examples/video.mp4)
 
-
-
-
+#### 5. Discussions
+1. There can be more data augument technics I did not implemeted, i.e random image selecting between the left, right and center images, converting BGR to RBG, translating the image, ... Those would help to increase the accuracy. 
+2. Will try 2nd track.
