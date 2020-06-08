@@ -90,7 +90,7 @@ angles.append(-angle)
 #### 4. Model Testing
 
 After the model was trained, the test drive was done with Autonomous mode using the simulator. The car could drive smothly around track.
-![alt text][image4]
+![alt text]https://github.com/Hyun5/CarND-Behavioral-Cloning-P3/blob/master/examples/video.mp4
 
 
 
