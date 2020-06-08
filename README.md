@@ -9,7 +9,6 @@
 [image1]: ./examples/center_drive.png "Center Drive"
 [image2]: ./examples/original_image.png "Normal Image"
 [image3]: ./examples/flipped_image.png "Flipped Image"
-[image4]: ./examples/video.mp4 "video file"
 
 
 Overview
@@ -90,7 +89,7 @@ angles.append(-angle)
 #### 4. Model Testing
 
 After the model was trained, the test drive was done with Autonomous mode using the simulator. The car could drive smothly around track.
-![Video.mp4][https://github.com/Hyun5/CarND-Behavioral-Cloning-P3/blob/master/examples/video.mp4]
+![Test Video File](https://github.com/Hyun5/CarND-Behavioral-Cloning-P3/blob/master/examples/video.mp4)
 
 
 
