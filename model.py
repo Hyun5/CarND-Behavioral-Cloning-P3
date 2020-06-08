@@ -58,8 +58,9 @@ def generator(lines, batch_size=32):
             y_train = np.array(angles)
             yield sklearn.utils.shuffle(X_train, y_train)
 
-# Set our batch size
+# Hyperparameteres
 batch_size=32
+EPOCH=5
 
 # compile and train the model using the generator function
 train_generator = generator(train_samples, batch_size=batch_size)
@@ -85,18 +86,6 @@ model.compile(loss='mse', optimizer='adam')
 model.fit_generator(train_generator, steps_per_epoch=np.ceil(len(train_samples)/batch_size),
             validation_data=validation_generator,
             validation_steps=np.ceil(len(validation_samples)/batch_size),
-            epochs=5, verbose=1)
+            epochs=EPOCH, verbose=1)
 
 model.save('model.h5')
-
-'''
-augmented_images, augmented_angles = [], []
-for image,angles in zip(images, angles):
-    augmented_images.append(image)
-    augmented_angles.append(angle)
-    augmented_images.append(cv2.flip(image,1))
-    augmented_angles.append(angle*-1.0)
-
-X_train = np.array(augmented_images)
-y_train = np.array(augmented_angles)
-'''
